@@ -1,16 +1,16 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "M ABDUL",
+  lastName: "GHOFUR",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Design Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "abdulghofur0940@gmail.com",
+  location: "Asia/Bojonegoro", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Indonesia", "English", "Java" ], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
