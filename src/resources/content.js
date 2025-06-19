@@ -101,45 +101,46 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "FREELACE",
+        timeframe: "2023 - Present",
+        role: "Junior IoT Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed and deployed an IoT-based monitoring system using ESP8266 and Laravel, reducing manual checks by 60%.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Integrated MQTT and HTTP protocols for real-time data transmission between devices and cloud, improving system responsiveness by 35%.
+          </>,
+          <>
+            Collaborated on Smart Garden automation, enabling remote control of pumps and sensors, and improved soil moisture efficiency.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.png",
+            alt: "IOT Project",
             width: 16,
             height: 9,
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+      // {
+      //   company: "Creativ3",
+      //   timeframe: "2018 - 2022",
+      //   role: "Lead Designer",
+      //   achievements: [
+      //     <>
+      //       Developed a design system that unified the brand across multiple platforms, improving
+      //       design consistency by 40%.
+      //     </>,
+      //     <>
+      //       Led a cross-functional team to launch a new product line, contributing to a 15% increase
+      //       in overall company revenue.
+      //     </>,
+      //   ],
+      //   images: [],
+      // },
     ],
   },
   studies: {
@@ -147,13 +148,13 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universitas Nahdlatul Ulama Sunan Giri",
+        description: <>Studied Sistem Komputer.</>,
       },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+      // {
+      //   name: "Build the Future",
+      //   description: <>Studied online marketing and personal branding.</>,
+      // },
     ],
   },
   technical: {
@@ -161,8 +162,8 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Sensor Whisperer",
+        description: <>I make sensors talk to the cloud—sometimes better than humans do.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -180,12 +181,12 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "laravel",
+        description: <>Building next gen apps with laravel + tailwind css + mysql.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.png",
             alt: "Project image",
             width: 16,
             height: 9,
