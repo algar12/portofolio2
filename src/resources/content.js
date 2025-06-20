@@ -120,8 +120,8 @@ const about = {
           {
             src: "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.png",
             alt: "IOT Project",
-            width: 1056,
-            height: 92,
+            width: 16,
+            height: 9,
           },
         ],
       },
@@ -188,8 +188,8 @@ const about = {
           {
             src: "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.png",
             alt: "Project image",
-            width: 1353,
-            height: 609,
+            width: 16,
+            height: 9,
           },
         ],
       },
