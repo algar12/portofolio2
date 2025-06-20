@@ -1,27 +1,40 @@
 @use "./breakpoints.scss" as breakpoints;
 
 .position {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  /* Efek transparan + blur (glassmorphism) */
+  background-color: rgba(0, 0, 0, 0.4); // Transparan gelap
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* Transisi halus */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mask {
-    pointer-events: none;
-    backdrop-filter: blur(0.5rem);
-    background: linear-gradient(to bottom, var(--page-background), var(--static-transparent));
-    mask-image: linear-gradient(rgba(0,0,0) 25%, rgba(0, 0, 0, 0) 100%);
-    mask-size: 100% 100%;
+  pointer-events: none;
+  backdrop-filter: blur(0.5rem);
+  background: linear-gradient(to bottom, var(--page-background), var(--static-transparent));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%);
+  mask-size: 100% 100%;
 }
 
 @media (max-width: breakpoints.$s) {
-    .position {
-        top: auto;
-        position: fixed;
-        bottom: var(--static-space-24);
-    }
+  .position {
+    top: auto;
+    position: fixed;
+    bottom: var(--static-space-24);
+    background-color: rgba(0, 0, 0, 0.6); // Bisa dibuat lebih gelap di mode mobile
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+  }
 
-    .mask {
-        transform: rotate(180deg);
-        bottom: 0;
-    }
+  .mask {
+    transform: rotate(180deg);
+    bottom: 0;
+  }
 }
