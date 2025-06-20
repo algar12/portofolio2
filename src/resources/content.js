@@ -188,8 +188,8 @@ const about = {
           {
             src: "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.png",
             alt: "Project image",
-            width: 16,
-            height: 9,
+            width: 1353,
+            height: 609,
           },
         ],
       },
