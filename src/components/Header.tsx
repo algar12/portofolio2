@@ -65,13 +65,12 @@ export const Header = () => {
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
-            background="page"
             border="neutral-alpha-weak"
             radius="m-4"
-            shadow="l"
             padding="4"
             horizontal="center"
             zIndex={1}
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(12px)' }}
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (

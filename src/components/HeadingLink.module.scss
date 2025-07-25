@@ -1,39 +1,24 @@
 .control {
-  cursor: pointer;
+    cursor: pointer;
 
-  // Efek transparan dan blur
-  background-color: rgba(0, 0, 0, 0.4); // semi transparan hitam
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    &:hover {
+        .visibility {
+            opacity: 1;
+        }
 
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.75rem;
-
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-
-  &:hover {
-    .visibility {
-      opacity: 1;
-      transform: scale(1); // ikon sedikit membesar saat hover
+        .text {
+            text-decoration-line: underline;
+        }
     }
-
-    .text {
-      text-decoration-line: underline;
-    }
-
-    background-color: rgba(0, 0, 0, 0.6); // lebih gelap saat hover
-  }
 }
 
 .text {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.25em;
-  text-decoration-color: var(--neutral-border-strong);
-  color: var(--neutral-on-background-strong); // warna teks tetap terbaca
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: var(--neutral-border-strong);
 }
 
 .visibility {
-  opacity: 0;
-  transform: scale(0.875);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: scale(0.875);
 }
