@@ -1,0 +1,39 @@
+---
+title: "IoT Monitoring System with ESP8266 & Laravel"
+publishedAt: "2025-06-05"
+summary: "Real-time IoT monitoring system using ESP8266 microcontroller integrated with Laravel backend, featuring MQTT protocol and responsive dashboard."
+images:
+  - "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.jpg"
+  - "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.jpg"
+---
+
+## Overview
+
+Developed a comprehensive IoT monitoring system that bridges embedded hardware with cloud-based web applications. This project demonstrates real-time sensor data collection, transmission, and visualization using industry-standard protocols.
+
+## Key Features
+
+- **ESP8266 Integration**: Programmed ESP8266 microcontroller to read sensor data and transmit to cloud server using WiFi connectivity.
+- **MQTT Protocol**: Implemented MQTT (Message Queuing Telemetry Transport) for efficient, lightweight message transmission between devices and server.
+- **Laravel Backend**: Built robust REST API using Laravel 11 for data processing, storage, and authentication.
+- **Real-time Dashboard**: Created responsive web dashboard using Tailwind CSS and Chart.js for live sensor data visualization.
+- **Data Persistence**: Designed MySQL database schema for historical data storage and analytics.
+
+## Technologies Used
+
+- **Hardware**: ESP8266 NodeMCU, DHT22 sensor, Soil moisture sensor
+- **Embedded**: Arduino IDE, C++
+- **Backend**: Laravel 11, PHP 8.2, MySQL
+- **Frontend**: Blade templates, Tailwind CSS, Alpine.js
+- **Protocols**: MQTT, HTTP/HTTPS, WebSocket
+- **IoT Platform**: MQTT Broker (Mosquitto)
+
+## Challenges and Learnings
+
+One major challenge was ensuring reliable WiFi connectivity and handling connection drops gracefully. Implemented reconnection logic with exponential backoff and local data caching. Also learned to optimize MQTT payload size to reduce bandwidth usage and improve battery life.
+
+Managing real-time data synchronization between multiple ESP8266 devices required careful consideration of message queuing and timestamp handling to prevent race conditions.
+
+## Outcome
+
+The system successfully reduced manual monitoring checks by 60% and provided real-time alerts via Telegram bot integration. The dashboard enables remote monitoring from anywhere, improving system responsiveness by 35%. Currently deployed for Smart Garden automation and environmental monitoring applications.

@@ -1,0 +1,85 @@
+---
+title: "Deteksi Kematangan Tomat dengan AI"
+publishedAt: "2024-11-20"
+summary: "Sistem deep learning untuk otomasi pertanian menggunakan CNN untuk klasifikasi kematangan tomat ke dalam tiga kategori dengan akurasi tinggi."
+images:
+  - "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.jpg"
+link: "https://github.com/algar12/Deteksi_tomat"
+---
+
+## Ringkasan
+
+Sistem computer vision cerdas yang memanfaatkan deep learning untuk mengotomasi klasifikasi kematangan tomat. Dibangun dengan TensorFlow dan Keras, project ini mendemonstrasikan aplikasi praktis AI dalam pertanian untuk kontrol kualitas dan optimasi panen.
+
+## Sistem Klasifikasi
+
+Model mengklasifikasikan tomat ke dalam tiga kategori berbeda:
+- 🔴 **Matang**: Siap dipanen dan dikonsumsi
+- 🟢 **Mentah**: Masih berkembang, memerlukan waktu lebih lama
+- 🟠 **Setengah Matang**: Tahap transisi
+
+## Opsi Interface yang Beragam
+
+### Command Line Interface (CLI)
+- Prediksi cepat untuk batch processing  
+- Ideal untuk pipeline otomatis dan testing
+- Ringan dan efisien
+
+### Graphical User Interface (Tkinter)
+- Aplikasi desktop yang user-friendly
+- Upload gambar dan prediksi real-time
+- Visual feedback dengan confidence score
+
+### Aplikasi Web (Streamlit)
+- Interface berbasis web modern
+- Drag-and-drop upload gambar
+- Tampilan hasil yang interaktif
+- Prediksi yang dapat dibagikan
+
+## Arsitektur Teknis
+
+### Desain Model
+- **Convolutional Neural Network (CNN)** yang dioptimasi untuk klasifikasi gambar
+- **Data Augmentation**: Rotasi, flip, zoom untuk training yang robust
+- **Batch Normalization**: Stabilitas dan konvergensi training yang lebih baik
+- **Dropout Regularization**: Mencegah overfitting, meningkatkan generalisasi
+
+### Fitur Training Lanjutan
+- **Early Stopping**: Terminasi training otomatis di titik optimal
+- **Learning Rate Scheduling**: Learning rate adaptif untuk konvergensi lebih baik
+- **Model Checkpointing**: Menyimpan bobot model terbaik selama training
+- **Integrasi TensorBoard**: Visualisasi training real-time
+
+## Metrik Performa
+
+Model mencapai akurasi tinggi melalui:
+- Dataset komprehensif dengan distribusi kelas yang seimbang
+- Teknik preprocessing dan normalisasi advanced
+- Optimasi hyperparameter melalui tuning sistematis
+- Cross-validation untuk assessment reliability
+
+## Tech Stack
+
+- **Framework**: TensorFlow 2.x / Keras
+- **Bahasa**: Python 3.x
+- **CV Library**: OpenCV untuk image processing
+- **GUI**: Tkinter untuk interface desktop
+- **Web**: Streamlit untuk aplikasi web
+- **Visualisasi**: Matplotlib, TensorBoard
+
+## Aplikasi di Dunia Nyata
+
+Sistem ini dapat diterapkan untuk:
+- **Kontrol Kualitas**: Penyortiran otomatis di fasilitas packing
+- **Optimasi Panen**: Menentukan waktu pemetikan optimal
+- **Supply Chain**: Tracking kematangan selama transportasi
+- **Penelitian**: Studi pola dan kondisi kematangan
+
+## Highlight Project
+
+- **Pipeline ML End-to-End**: Dari pengumpulan data hingga deployment
+- **Opsi Deployment Beragam**: Fleksibilitas untuk berbagai use case
+- **Production-Ready**: Error handling dan validasi yang robust
+- **Well-Documented**: Struktur kode yang jelas dan README komprehensif
+
+Project ini mendemonstrasikan profisiensi dalam machine learning, computer vision, dan kemampuan menciptakan solusi AI praktis untuk tantangan pertanian di dunia nyata.

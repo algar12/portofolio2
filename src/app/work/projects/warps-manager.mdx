@@ -1,0 +1,133 @@
+---
+title: "WarPS Manager - Sistem Manajemen Bisnis"
+publishedAt: "2024-10-15"
+summary: "Sistem manajemen komprehensif untuk bisnis warung kopi dan rental PlayStation, dibangun dengan Laravel 11 dan FilamentPHP dengan monitoring real-time dan financial reporting."
+images:
+  - "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.jpg"
+link: "https://github.com/algar12/warungps"
+---
+
+## Ringkasan
+
+WarPS Manager adalah solusi manajemen bisnis lengkap yang dirancang khusus untuk operasi gabungan warung kopi (Warkop) dan rental PlayStation. Dibangun dengan Laravel 11 dan FilamentPHP, sistem ini menyederhanakan operasi dari tracking rental konsol hingga penjualan food & beverage dan manajemen karyawan.
+
+## Fitur Inti
+
+### 1. Manajemen Rental Konsol
+
+**Monitoring Real-Time**
+- Dashboard live (ConsoleMonitor) yang menampilkan status unit (Ready/In-Use)
+- Timer countdown untuk rental yang aktif
+- Indikator status visual untuk overview cepat
+
+**Billing Otomatis**
+- Kalkulasi harga berbasis durasi
+- Support untuk berbagai tipe konsol (PS3, PS4, PS5)
+- Tier harga berbeda per generasi konsol
+
+**Operasi Berbasis Shift**
+- Deteksi shift otomatis (Pagi: 06:00-18:00, Malam: 18:01-05:59)
+- Tracking revenue terpisah per shift
+- Laporan serah terima shift
+
+### 2. Point of Sale (F&B)
+
+**Manajemen Order**
+- Entry order cepat untuk pelanggan rental dan walk-in
+- Kategorisasi dan pencarian produk
+- Riwayat dan tracking order
+
+**Kontrol Inventory**
+- Pengurangan stok otomatis saat penjualan
+- Alert dan notifikasi stok menipis
+- Tracking stok berbasis ingredient (dukungan resep)
+- Monitoring stok bahan baku (kopi, mi instan, dll)
+
+### 3. Financial Reporting
+
+**Format Statement**
+Sistem menghasilkan laporan keuangan komprehensif yang menampilkan:
+
+**Breakdown Revenue**
+- Pendapatan rental konsol (per shift)
+- Penjualan food & beverage (per shift)
+- Total revenue harian/bulanan
+
+**Pengeluaran Operasional**
+- Pembelian es, air, LPG
+- Biaya operasional lainnya
+- Tracking pengeluaran berkategori
+
+**Kalkulasi Net Profit**
+- Pendapatan - Pengeluaran Operasional = Laba Bersih Toko
+- Opsional: Termasuk payroll dan kasbon untuk laba akhir
+
+**Filtering Fleksibel**
+- Laporan harian: Breakdown transaksi detail
+- Laporan bulanan: Overview performa dan tren
+- Pemilihan rentang tanggal kustom
+
+### 4. Manajemen Human Resources
+
+**Absensi Digital**
+- Sistem Clock In/Out untuk staff
+- Tracking kehadiran otomatis
+- Deteksi terlambat/lembur
+
+**Sistem Payroll**
+- Konfigurasi tarif harian per karyawan
+- Kalkulasi gaji otomatis berdasarkan kehadiran
+- Manajemen kasbon dengan workflow persetujuan
+- Pembuatan slip gaji sederhana
+- Tracking status pembayaran (Pending/Approved/Paid)
+
+## Tech Stack
+
+- **Framework**: Laravel 11
+- **Admin Panel**: FilamentPHP
+- **Database**: MySQL
+- **Fitur**: 
+  - Update real-time
+  - Role-based access control
+  - Validasi dan sanitasi data
+  - Generate laporan PDF
+
+## Arsitektur Sistem
+
+### Desain Modular
+- Modul terpisah untuk Rental, POS, Finance, dan HR
+- RESTful API untuk potensi integrasi mobile app
+- Event-driven architecture untuk update real-time
+
+### User Roles
+- **Admin**: Akses penuh sistem dan konfigurasi
+- **Manager**: Laporan keuangan dan manajemen HR
+- **Kasir**: Operasi POS dan rental
+- **Staff**: Akses terbatas untuk absensi
+
+## Dampak Bisnis
+
+**Peningkatan Efisiensi**
+- Pengurangan kesalahan kalkulasi manual
+- Proses transaksi lebih cepat
+- Insight bisnis real-time
+
+**Kontrol Keuangan**
+- Tracking revenue yang akurat
+- Monitoring pengeluaran
+- Analisis margin keuntungan
+
+**Transparansi Operasional**
+- Metrik performa shift yang jelas
+- Tracking produktivitas karyawan
+- Optimasi inventory
+
+## Highlight Utama
+
+- **Production-Ready**: Saat ini aktif digunakan
+- **Docker Support**: Deployment dan scaling yang simpel
+- **Well-Documented**: Panduan setup dan maintenance komprehensif
+- **Shift-Aware**: Didesain untuk operasi 24 jam
+- **Financial Focus**: Penekanan pada tracking profit dan kontrol biaya
+
+Project ini mendemonstrasikan expertise dalam pengembangan Laravel full-stack, implementasi logika bisnis, dan penciptaan solusi praktis untuk tantangan operasional di industri hospitality dan entertainment.

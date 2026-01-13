@@ -1,17 +1,21 @@
+import { getPosts } from "@/app/utils/utils";
 import {
   Avatar,
-  Button,
+  AvatarGroup,
   Column,
-  Flex,
   Heading,
-  Icon,
-  IconButton,
+  Flex,
+  Text,
+  SmartLink,
   Media,
   Tag,
-  Text,
+  Button,
+  Icon,
+  IconButton,
   Meta,
-  Schema
+  Schema,
 } from "@once-ui-system/core";
+import { EnlargeableImage } from "@/components/EnlargeableImage";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
@@ -153,26 +157,26 @@ export default function About() {
                 {social.map(
                   (item) =>
                     item.link && (
-                        <React.Fragment key={item.name}>
-                            <Button
-                                className="s-flex-hide"
-                                key={item.name}
-                                href={item.link}
-                                prefixIcon={item.icon}
-                                label={item.name}
-                                size="s"
-                                weight="default"
-                                variant="secondary"
-                            />
-                            <IconButton
-                                className="s-flex-show"
-                                size="l"
-                                key={`${item.name}-icon`}
-                                href={item.link}
-                                icon={item.icon}
-                                variant="secondary"
-                            />
-                        </React.Fragment>
+                      <React.Fragment key={item.name}>
+                        <Button
+                          className="s-flex-hide"
+                          key={item.name}
+                          href={item.link}
+                          prefixIcon={item.icon}
+                          label={item.name}
+                          size="s"
+                          weight="default"
+                          variant="secondary"
+                        />
+                        <IconButton
+                          className="s-flex-show"
+                          size="l"
+                          key={`${item.name}-icon`}
+                          href={item.link}
+                          icon={item.icon}
+                          variant="secondary"
+                        />
+                      </React.Fragment>
                     ),
                 )}
               </Flex>
@@ -218,26 +222,13 @@ export default function About() {
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
                         {experience.images.map((image, index) => (
-                          <Flex
+                          <EnlargeableImage
                             key={index}
-                            border="neutral-medium"
-                            radius="m"
                             //@ts-ignore
-                            minWidth={image.width}
+                            src={image.src}
                             //@ts-ignore
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
+                            alt={image.alt}
+                          />
                         ))}
                       </Flex>
                     )}
@@ -287,26 +278,13 @@ export default function About() {
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
-                          <Flex
+                          <EnlargeableImage
                             key={index}
-                            border="neutral-medium"
-                            radius="m"
                             //@ts-ignore
-                            minWidth={image.width}
+                            src={image.src}
                             //@ts-ignore
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
+                            alt={image.alt}
+                          />
                         ))}
                       </Flex>
                     )}

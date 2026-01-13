@@ -32,13 +32,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
+      <div style={{ width: '100%', position: 'relative' }}>
+        <style>{`
+          .custom-carousel-wrapper img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+          }
+          .custom-carousel-wrapper > div {
+            aspect-ratio: unset !important;
+          }
+        `}</style>
+        <div className="custom-carousel-wrapper">
+          <Carousel
+            sizes="(max-width: 960px) 100vw, 960px"
+            items={images.map((image) => ({
+              slide: image,
+              alt: title,
+            }))}
+          />
+        </div>
+      </div>
       <Flex
         mobileDirection="column"
         fillWidth

@@ -1,0 +1,66 @@
+---
+title: "Air.Guard - Sistem Monitoring Gas IoT"
+publishedAt: "2024-12-15"
+summary: "Sistem monitoring kualitas udara real-time menggunakan ESP8266 dan Firebase, dengan UI bergaya Arc Reactor dan sistem alert pintar untuk deteksi gas."
+images:
+  - "/images/projects/project-01/image.jpg"
+link: "https://github.com/algar12/monitoring_sensorGas"
+---
+
+## Ringkasan
+
+Air.Guard adalah sistem monitoring gas berbasis IoT yang dirancang untuk memberikan pengawasan kualitas udara secara real-time. Dibangun dengan teknologi web modern dan hardware IoT, sistem ini menampilkan interface gauge bergaya Arc Reactor yang inovatif dan mekanisme alert yang intelligent.
+
+## Fitur Utama
+
+### Monitoring Real-Time
+- Pelacakan konsentrasi gas (PPM) secara live dengan latensi minimal
+- Firebase Realtime Database untuk sinkronisasi data instan
+- Update status asap dan kualitas udara secara kontinu
+
+### Visualisasi Canggih
+- **Arc Reactor Gauge**: Implementasi HTML5 Canvas kustom untuk visualisasi meteran gas yang dinamis dan futuristik
+- **Grafik Interaktif**: Integrasi Chart.js untuk analisis data historis dan visualisasi tren
+- **Smart Alerts**: Indikator status berkode warna (Aman/Waspada/Bahaya) dengan efek visual neon
+
+### Tech Stack Modern
+- **Frontend**: React.js dengan Vite untuk performa optimal
+- **Styling**: Tailwind CSS v4 dengan efek glassmorphism
+- **Backend**: Firebase Realtime Database
+- **Hardware**: Mikrokontroler ESP8266 dengan sensor gas MQ-2/MQ-135
+- **Visualisasi Data**: Chart.js dan React-Chartjs-2
+
+## Arsitektur Sistem
+
+Sistem beroperasi melalui proses empat langkah yang efisien:
+
+1. **Deteksi**: Sensor MQ-2 terus memantau kualitas udara
+2. **Transmisi**: ESP8266 memproses data sensor dan mengirim ke Firebase via WiFi
+3. **Sinkronisasi**: Aplikasi React subscribe ke update real-time Firebase
+4. **Visualisasi**: Dashboard memproses data mentah menjadi insight dengan feedback visual
+
+## Implementasi Teknis
+
+### Struktur Modular
+- Arsitektur berbasis fitur dengan modul terpisah untuk Dashboard, History, Alerts, dan Settings
+- Library komponen yang reusable (Badge, Button, Card)
+- Custom hooks untuk manajemen data dan state handling
+- Fungsi utilitas untuk filtering data, export, dan kalkulasi gas
+
+### User Interface
+- Tema cyber-industrial dengan dark mode
+- Desain responsif untuk desktop dan mobile
+- Navigasi multi-view antara Monitor, Analytics, History, dan Settings
+- Grafik history interaktif untuk analisis tren
+
+## Dampak & Pembelajaran
+
+Project ini mendemonstrasikan expertise dalam:
+- Pengembangan IoT full-stack
+- Sinkronisasi data real-time
+- Praktik pengembangan React modern
+- Integrasi Firebase
+- Integrasi hardware-software
+- Visualisasi data dan UX design
+
+Sistem ini menunjukkan kemampuan untuk menjembatani data sensor fisik dengan interface web yang elegan, menciptakan solusi praktis untuk monitoring lingkungan.

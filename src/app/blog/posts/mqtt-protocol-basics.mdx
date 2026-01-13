@@ -1,0 +1,37 @@
+---
+title: "Understanding MQTT Protocol for IoT"
+publishedAt: "2025-06-10"
+summary: "Learn how MQTT (Message Queuing Telemetry Transport) enables efficient communication between IoT devices."
+image: "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.jpg"
+---
+
+## What is MQTT?
+
+MQTT is a lightweight messaging protocol designed for constrained devices and low-bandwidth, high-latency networks. It's perfect for IoT applications where devices need to send small amounts of data efficiently.
+
+## Key Concepts
+
+### Publish/Subscribe Model
+
+Unlike HTTP's request/response, MQTT uses publish/subscribe:
+- **Publishers** send messages to topics
+- **Subscribers** receive messages from topics they're interested in
+- **Broker** manages message distribution
+
+### Quality of Service (QoS)
+
+MQTT offers three QoS levels:
+- **QoS 0**: At most once (fire and forget)
+- **QoS 1**: At least once (acknowledged delivery)
+- **QoS 2**: Exactly once (assured delivery)
+
+## Use Cases in IoT
+
+- Sensor data collection
+- Remote device control
+- Real-time monitoring
+- Smart home automation
+
+## Getting Started
+
+Use libraries like PubSubClient for ESP8266 to implement MQTT in your projects. Many cloud platforms (AWS IoT, Azure IoT Hub) support MQTT natively.

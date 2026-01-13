@@ -1,0 +1,114 @@
+---
+title: "Smart Garden IoT System"
+publishedAt: "2024-09-10"
+summary: "Sistem manajemen taman otomatis yang didukung sensor IoT dan backend Laravel, dengan monitoring kelembaban tanah real-time dan kontrol irigasi cerdas."
+images:
+  - "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.jpg"
+link: "https://github.com/algar12/laravel-smart-garden-iot"
+---
+
+## Ringkasan
+
+Sistem otomasi taman pintar berbasis IoT yang mengombinasikan backend Laravel dengan embedded sensors untuk menciptakan solusi perawatan tanaman yang intelligent. Sistem memantau kondisi tanah dan mengotomasi irigasi berdasarkan data real-time, membuat perawatan tanaman menjadi mudah dan efisien.
+
+## Fungsionalitas Inti
+
+### Irigasi Otomatis
+- **Smart Watering**: Kontrol pompa otomatis berdasarkan level kelembaban tanah
+- **Konfigurasi Threshold**: Threshold kelembaban yang dapat disesuaikan untuk berbagai jenis tanaman
+- **Manajemen Jadwal**: Jadwal penyiraman berbasis waktu dengan kemampuan override
+- **Konservasi Air**: Mencegah over-watering melalui monitoring cerdas
+
+### Monitoring Real-Time
+- **Kelembaban Tanah**: Tracking kontinu level humidity tanah
+- **Data Lingkungan**: Integrasi sensor suhu dan cahaya opsional
+- **Tracking Historis**: Logging data untuk analisis pola
+- **Sistem Alert**: Notifikasi untuk kondisi kritis (terlalu kering/terlalu basah)
+
+## Arsitektur Teknis
+
+### Backend (Laravel)
+- **API Endpoints**: RESTful API untuk ingesting dan retrieval data sensor
+- **Database**: MySQL untuk storing pembacaan sensor dan konfigurasi
+- **Dashboard**: Interface web untuk monitoring dan kontrol
+- **Manajemen User**: Support multi-user dengan role-based access
+
+### Layer IoT
+- **Mikrokontroler**: ESP8266 atau board WiFi-enabled serupa
+- **Sensors**:
+  - Sensor kelembaban tanah
+  - DHT22 untuk suhu dan humidity (opsional)
+  - Sensor cahaya untuk tracking pertumbuhan optimal
+- **Actuators**: Modul relay untuk kontrol pompa
+- **Protokol**: MQTT untuk komunikasi low-latency yang reliable
+
+### Alur Komunikasi
+1. **Pengumpulan Data**: Sensor membaca parameter lingkungan
+2. **Transmisi**: ESP8266 mengirim data ke Laravel API via MQTT/HTTP
+3. **Processing**: Laravel memproses data dan menentukan action
+4. **Otomasi**: Sistem trigger irigasi jika diperlukan
+5. **Logging**: Semua event dan pembacaan disimpan untuk analisis
+
+## Fitur
+
+### Interface Dashboard
+- Visualisasi data sensor real-time
+- Representasi grafis tren kelembaban
+- Kontrol pompa manual override
+- Panel konfigurasi untuk threshold dan jadwal
+
+### Analitik Data
+- Chart data historis
+- Laporan efisiensi penyiraman
+- Tren kesehatan tanaman
+- Rekomendasi waktu penyiraman optimal
+
+### Mobile-Friendly
+- Desain responsif untuk akses smartphone
+- Monitoring dan kontrol remote
+- Push notification untuk event
+
+## Tech Stack
+
+- **Backend**: Laravel (versi terbaru)
+- **Frontend**: Blade templates dengan Alpine.js/Vue.js
+- **Database**: MySQL
+- **IoT**: ESP8266, MQTT broker
+- **Charts**: Chart.js untuk visualisasi data
+- **API**: Arsitektur RESTful
+
+## Use Case
+
+**Home Gardening**
+- Perawatan otomatis untuk tanaman indoor dan outdoor
+- Mode vacation untuk periode tanpa pengawasan
+
+**Pertanian**
+- Otomasi farming skala kecil
+- Optimasi resource untuk sustainable farming
+
+**Riset**
+- Pengumpulan data untuk studi pertumbuhan tanaman
+- Eksperimen dengan strategi irigasi berbeda
+
+## Highlight Project
+
+- **Energy Efficient**: Mode deep sleep untuk operasi battery-powered
+- **Scalable**: Support untuk multiple zone taman
+- **Extensible**: Mudah menambah tipe sensor baru
+- **Cost-Effective**: Menggunakan komponen affordable dan tersedia
+
+## Pengembangan Masa Depan
+
+- Machine learning untuk prediksi penyiraman
+- Integrasi Weather API untuk forecasting hujan
+- Integrasi panel surya untuk operasi off-grid
+- Pengembangan mobile app untuk iOS dan Android
+
+Project ini mendemonstrasikan profisiensi dalam:
+- Full-stack web development dengan Laravel
+- Programming dan integrasi IoT device
+- Implementasi protokol MQTT
+- Processing data real-time
+- Embedded systems dan integrasi hardware
+- Menciptakan solusi praktis untuk tantangan otomasi

@@ -76,13 +76,24 @@ export default async function Project({
         <Heading variant="display-strong-s">{post.metadata.title}</Heading>
       </Column>
       {post.metadata.images.length > 0 && (
-        <Media
-          priority
-          aspectRatio="16 / 9"
+        <Flex
+          fillWidth
           radius="m"
-          alt="image"
-          src={post.metadata.images[0]}
-        />
+          border="neutral-medium"
+          style={{ overflow: 'hidden', backgroundColor: 'var(--neutral-background)' }}
+        >
+          <img
+            src={post.metadata.images[0]}
+            alt={post.metadata.title}
+            style={{
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+              objectFit: 'contain'
+            }}
+            loading="eager"
+          />
+        </Flex>
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <Flex gap="12" marginBottom="24" vertical="center">

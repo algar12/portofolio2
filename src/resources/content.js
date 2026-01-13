@@ -1,5 +1,3 @@
-import { Logo } from "@once-ui-system/core";
-
 const person = {
   firstName: "M ABDUL",
   lastName: "GHOFUR",
@@ -10,7 +8,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   email: "abdulghofur0940@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Indonesia", "Java" ], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Indonesia", "Java"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -31,6 +29,11 @@ const social = [
     name: "GitHub",
     icon: "github",
     link: "https://github.com/algar12",
+  },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/gopungs1/",
   },
   // {
   //   name: "LinkedIn",
@@ -58,13 +61,13 @@ const home = {
   headline: <>Connecting sensors to systems—bridging the physical and digital worlds</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Featured project: <strong className="ml-4">Air.Guard</strong></>,
+    href: "/work/air-guard-gas-monitoring",
   },
   subline: (
     <>
-      I'm Ghofur, an IoT developer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I build systems that sense, respond, and connect.
-      <br/> In my spare time, I experiment with microcontrollers and smart automation.
+      I'm Ghofur, an IoT Engineer and Full-Stack Developer specializing in ESP8266, Laravel, React, and AI/ML.
+      <br /> Building smart systems from embedded sensors to cloud dashboards, with expertise in real-time monitoring and automation.
     </>
   ),
 };
@@ -90,9 +93,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-       Ghofur is a Bojonegoro-based IoT engineer with a passion for turning real-world problems into smart,
-       connected solutions. His work bridges embedded systems, cloud integration
-       and the intersection of hardware and software.
+        Ghofur is a Bojonegoro-based IoT engineer with a passion for turning real-world problems into smart,
+        connected solutions. His work bridges embedded systems, cloud integration
+        and the intersection of hardware and software.
       </>
     ),
   },
@@ -118,7 +121,7 @@ const about = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.png",
+            src: "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.jpg",
             alt: "IOT Project",
             width: 16,
             height: 9,
@@ -162,36 +165,38 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Sensor Whisperer",
-        description: <>I make sensors talk to the cloud—sometimes better than humans do.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          // {
-          //   src: "/images/projects/project-01/cover-02.jpg",
-          //   alt: "Project image",
-          //   width: 16,
-          //   height: 9,
-          // },
-          // {
-          //   src: "/images/projects/project-01/cover-03.jpg",
-          //   alt: "Project image",
-          //   width: 16,
-          //   height: 9,
-          // },
-        ],
-      },
-      {
-        title: "laravel",
-        description: <>Building next gen apps with laravel + tailwind css + mysql.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "IoT & Embedded Systems",
+        description: <>Membangun sistem monitoring real-time dengan ESP8266, sensor MQ-2/DHT22, dan integrasi Firebase/MQTT untuk komunikasi perangkat.</>,
         images: [
           {
-            src: "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.png",
-            alt: "Project image",
+            src: "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.jpg",
+            alt: "IoT Monitoring Dashboard",
             width: 16,
             height: 9,
           },
         ],
+      },
+      {
+        title: "AI & Machine Learning",
+        description: <>Mengembangkan model Computer Vision dengan TensorFlow/Keras untuk klasifikasi gambar, data augmentation, dan optimasi performa model.</>,
+        images: [],
+      },
+      {
+        title: "Full-Stack Web Development",
+        description: <>Expert dalam Laravel + FilamentPHP untuk backend, React + Vite untuk frontend modern, dengan Tailwind CSS untuk styling responsif.</>,
+        images: [
+          {
+            src: "/images/projects/project-01/Screenshot from 2025-06-20 02-17-43.jpg",
+            alt: "Laravel Dashboard",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Database & DevOps",
+        description: <>Mengelola MySQL databases, Firebase Realtime Database, dengan deployment menggunakan Docker untuk scalability.</>,
+        images: [],
       },
     ],
   },

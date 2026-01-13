@@ -1,0 +1,60 @@
+---
+title: "Getting Started with ESP8266 for IoT Projects"
+publishedAt: "2025-06-01"
+summary: "A beginner's guide to setting up ESP8266 microcontroller for Internet of Things applications with Arduino IDE."
+image: "/images/projects/project-01/Screenshot from 2025-06-05 08-59-03.jpg"
+---
+
+## Introduction
+
+The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability. It's perfect for IoT projects where you need to connect sensors and devices to the internet.
+
+## What You'll Need
+
+- ESP8266 NodeMCU board
+- USB cable (micro USB)
+- Arduino IDE installed
+- Basic understanding of C/C++
+
+## Setting Up Arduino IDE
+
+1. Download and install Arduino IDE from arduino.cc
+2. Add ESP8266 board support via Board Manager
+3. Select your board (NodeMCU 1.0)
+4. Choose the correct COM port
+
+## Your First ESP8266 Program
+
+```cpp
+#include <ESP8266WiFi.h>
+
+const char* ssid = "Your_WiFi_SSID";
+const char* password = "Your_Password";
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  
+  Serial.println("WiFi connected!");
+  Serial.println(WiFi.localIP());
+}
+
+void loop() {
+  // Your code here
+}
+```
+
+## Next Steps
+
+Once you have WiFi connectivity working, you can explore:
+- Reading sensor data
+- Sending data to cloud servers
+- MQTT protocol for IoT messaging
+- Building web interfaces
+
+Happy making! 🚀
