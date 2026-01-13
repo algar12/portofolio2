@@ -177,7 +177,7 @@ const about = {
         ],
       },
       {
-        title: "AI & Machine Learning",
+        title: "Machine Learning",
         description: <>Mengembangkan model Computer Vision dengan TensorFlow/Keras untuk klasifikasi gambar, data augmentation, dan optimasi performa model.</>,
         images: [],
       },
