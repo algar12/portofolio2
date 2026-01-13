@@ -66,7 +66,7 @@ const home = {
   },
   subline: (
     <>
-      I'm Ghofur, an IoT Engineer and Full-Stack Developer specializing in ESP8266, Laravel, React, and AI/ML.
+      I'm Ghofur, an IoT Engineer and Full-Stack Developer specializing in ESP8266, Laravel, React, and ML.
       <br /> Building smart systems from embedded sensors to cloud dashboards, with expertise in real-time monitoring and automation.
     </>
   ),
